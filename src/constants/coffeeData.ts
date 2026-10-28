@@ -6,7 +6,7 @@ export const COFFEE_ORIGINS: Record<CoffeeOriginId, CoffeeOrigin> = {
     name: 'Etiopia',
     region: 'Yirgacheffe G1 Kochere',
     country: 'Etiopia (Afryka)',
-    color: '#D46B4E', // Warm terracotta / sun-kissed coral
+    color: '#A9572F', // Warm terracotta
     accentColor: '#F5E6D8',
     labelBg: '#FCFAF7',
     textColor: '#2E1E17',
