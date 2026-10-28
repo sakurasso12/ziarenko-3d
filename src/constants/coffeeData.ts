@@ -1,0 +1,135 @@
+import { CoffeeOrigin, CoffeeOriginId, CoffeeWeight, GrindType } from '../types';
+
+export const COFFEE_ORIGINS: Record<CoffeeOriginId, CoffeeOrigin> = {
+  etiopia: {
+    id: 'etiopia',
+    name: 'Etiopia',
+    region: 'Yirgacheffe G1 Kochere',
+    country: 'Etiopia (Afryka)',
+    color: '#D46B4E', // Warm terracotta / sun-kissed coral
+    accentColor: '#F5E6D8',
+    labelBg: '#FCFAF7',
+    textColor: '#2E1E17',
+    tastingNotes: ['Jaśmin', 'Bergamotka', 'Brzoskwinia', 'Miód akacjowy'],
+    varietal: 'Kurume & Dega (Heirloom)',
+    altitude: '1900 - 2200 m n.p.m.',
+    process: 'Washed (Mokry)',
+    roastLevel: 'Jasny',
+    roastScore: 2,
+    flavorProfile: {
+      kwasowosc: 5,
+      slodycz: 4,
+      cialo: 2,
+      aromat: 5,
+    },
+    prices: {
+      '250g': 46,
+      '500g': 86,
+      '1000g': 158,
+    },
+    description: 'Niezwykle soczysta i florystyczna kawa o delikatnym ciele, przypominająca szlachetną earl grey z nutami świeżych brzoskwiń.',
+    bestFor: 'Drip V60, Chemex, Aeropress',
+  },
+  brazylia: {
+    id: 'brazylia',
+    name: 'Brazylia',
+    region: 'Cerrado Mineiro Fazenda Santa Ines',
+    country: 'Brazylia (Ameryka Płd.)',
+    color: '#463124', // Deep roasted artisan espresso brown
+    accentColor: '#D99B61',
+    labelBg: '#FAF5ED',
+    textColor: '#241812',
+    tastingNotes: ['Czekolada deserowa', 'Orzech laskowy', 'Karmel toffi', 'Migdały'],
+    varietal: 'Mundo Novo, Yellow Catuai',
+    altitude: '1150 m n.p.m.',
+    process: 'Pulped Natural',
+    roastLevel: 'Średni',
+    roastScore: 4,
+    flavorProfile: {
+      kwasowosc: 1,
+      slodycz: 5,
+      cialo: 5,
+      aromat: 4,
+    },
+    prices: {
+      '250g': 39,
+      '500g': 74,
+      '1000g': 136,
+    },
+    description: 'Klasyczny, kremowy profil o znikomej kwasowości. Gęsta crema, głęboki orzechowo-czekoladowy posmak i słodki finisz.',
+    bestFor: 'Espresso, Kawiarka, Kawy mleczne',
+  },
+  kolumbia: {
+    id: 'kolumbia',
+    name: 'Kolumbia',
+    region: 'Huila San Agustin Microlot',
+    country: 'Kolumbia (Ameryka Płd.)',
+    color: '#2A5C43', // Highland rainforest emerald
+    accentColor: '#E6A35C',
+    labelBg: '#FAF7F0',
+    textColor: '#192E23',
+    tastingNotes: ['Czerwone jabłko', 'Karmel', 'Czysta pomarańcza', 'Kakao'],
+    varietal: 'Castillo, Colombia',
+    altitude: '1650 - 1800 m n.p.m.',
+    process: 'Fully Washed',
+    roastLevel: 'Średnio-jasny',
+    roastScore: 3,
+    flavorProfile: {
+      kwasowosc: 3,
+      slodycz: 5,
+      cialo: 4,
+      aromat: 4,
+    },
+    prices: {
+      '250g': 44,
+      '500g': 82,
+      '1000g': 152,
+    },
+    description: 'Harmonijna, zbalansowana kawa o gładkiej słodyczy karmelu i rześkich akcentach soczystego jabłka z cytrusowym tłem.',
+    bestFor: 'Przelew, Kawiarka, Espresso nowoczesne',
+  },
+  gwatemala: {
+    id: 'gwatemala',
+    name: 'Gwatemala',
+    region: 'Antigua Pastoral Los Volcanes',
+    country: 'Gwatemala (Ameryka Śr.)',
+    color: '#553449', // Velvet plum / artisan wine
+    accentColor: '#DE9F65',
+    labelBg: '#FBF5EE',
+    textColor: '#2B1A25',
+    tastingNotes: ['Śliwka w czekoladzie', 'Cynamon', 'Ciemne kakao', 'Truskawka'],
+    varietal: 'Bourbon, Caturra',
+    altitude: '1500 - 1650 m n.p.m.',
+    process: 'Washed',
+    roastLevel: 'Średni',
+    roastScore: 3,
+    flavorProfile: {
+      kwasowosc: 2,
+      slodycz: 4,
+      cialo: 4,
+      aromat: 4,
+    },
+    prices: {
+      '250g': 45,
+      '500g': 84,
+      '1000g': 154,
+    },
+    description: 'Wulkaniczna gleba doliny Antigua nadaje ziarnom bogaty korzenny charakter ze słodką dojrzałą śliwką i aksamitnym finiszem.',
+    bestFor: 'French Press, Kawiarka, Drip, Espresso',
+  },
+};
+
+export const WEIGHT_OPTIONS: { id: CoffeeWeight; label: string; sublabel: string; scale: [number, number, number] }[] = [
+  { id: '250g', label: '250 g', sublabel: 'ok. 15-18 filiżanek', scale: [0.9, 0.88, 0.9] },
+  { id: '500g', label: '500 g', sublabel: 'ok. 30-35 filiżanek', scale: [1.06, 1.05, 1.06] },
+  { id: '1000g', label: '1 kg', sublabel: 'ok. 60-70 filiżanek', scale: [1.24, 1.25, 1.24] },
+];
+
+export const GRIND_OPTIONS: { id: GrindType; label: string; desc: string }[] = [
+  { id: 'ziarna', label: 'Całe ziarna', desc: 'Dla domowego młynka (zalecane)' },
+  { id: 'espresso', label: 'Espresso', desc: 'Drobne pod kolbę ciśnieniową' },
+  { id: 'kawiarka', label: 'Kawiarka', desc: 'Średnio-drobne (Moka)' },
+  { id: 'drip', label: 'Przelew / Drip', desc: 'Średnie pod V60, Chemex' },
+  { id: 'aeropress', label: 'Aeropress', desc: 'Średnio-drobne' },
+  { id: 'frenchpress', label: 'French Press', desc: 'Grube pod praskę francuską' },
+];
